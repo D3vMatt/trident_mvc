@@ -29,7 +29,7 @@
       <option name="presentableId" value="Default" />
       <updated>1618897399450</updated>
       <workItem from="1618897400523" duration="472000" />
-      <workItem from="1618898030231" duration="323000" />
+      <workItem from="1618898030231" duration="2813000" />
     </task>
     <servers />
   </component>
@@ -37,10 +37,14 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="776" y="243" key="NewPhpClassDialog" timestamp="1618898312268">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1618899271342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="776" y="243" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1618898312268" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1618899271342" />
+    <state x="776" y="243" key="NewPhpClassDialog" timestamp="1618900338946">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="776" y="243" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1618900338946" />
     <state x="795" y="443" key="NewPhpFileDialog" timestamp="1618897803008">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

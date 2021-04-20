@@ -1,0 +1,16 @@
+{
+    "name": "matt/trident_mvc",
+    "authors": [
+        {
+            "name": "EulerSolutionsMatt",
+            "email": "47004936+EulerSolutionsMatt@users.noreply.github.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "require": {},
+    "description": ""
+}
