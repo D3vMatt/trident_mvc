@@ -7,8 +7,13 @@ use app\core\Application;
 $app = new Application();
 
 $app->router->get('/', function (){
-    return 'Hello World';
+    echo 'Hello World';
 });
+
+$app->router->get('/test', function (){
+    echo 'This is a test route';
+});
+
 
 $app->run();
 
