@@ -37,11 +37,16 @@ class Router
         $method = $this->request->getMethod();
         $path = $this->request->getPath();
         $callback = $this->routes[$method][$path] ?? false;
-        if ($callback) {
-            call_user_func($callback);
-            exit;
-        }
-        echo 'Route not found';
+
+        if (is_string($callback))
+            return include_once __DIR__ ."/../views/$callback.php";
+
+        if ($callback)
+            return call_user_func($callback);
+
+
+
+        return 'Route not found';
 
     }
 }
