@@ -38,8 +38,11 @@ class Router
         $path = $this->request->getPath();
         $callback = $this->routes[$method][$path] ?? false;
 
-        if (is_string($callback))
-            return include_once __DIR__ ."/../views/$callback.php";
+        if (is_string($callback)) {
+            $layoutContent = $this->includeAsString(Application::$ROOT_DIR ."/views/layout/main.php");
+            $viewContent = $this->includeAsString( Application::$ROOT_DIR ."/views/$callback.php");
+            return str_replace('{{content}}', $viewContent, $layoutContent);
+        }
 
         if ($callback)
             return call_user_func($callback);
@@ -49,4 +52,11 @@ class Router
         return 'Route not found';
 
     }
+
+    private function includeAsString($path) {
+        ob_start();
+        include_once $path;
+        return ob_get_clean();
+    }
+
 }

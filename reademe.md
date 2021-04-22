@@ -1,5 +1,15 @@
-implement views
+add a home.php view with tail windw/bootstrap
 
-route contact should refer to a contact.php view
+create views/layouts/main.php
 
-inside router resolve, if callback is a string, render the view
+renderView inside layout/content
+
+create layoutContent method
+
+pass the roote path to the application constructor
+save root path as static property of application
+
+
+get the layout as a string & replace {{content}} with our view
+
+create a renderOnlyView function that will return the required view as a string
