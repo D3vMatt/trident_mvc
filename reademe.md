@@ -1,15 +1,4 @@
-add a home.php view with tail windw/bootstrap
-
-create views/layouts/main.php
-
-renderView inside layout/content
-
-create layoutContent method
-
-pass the roote path to the application constructor
-save root path as static property of application
-
-
-get the layout as a string & replace {{content}} with our view
-
-create a renderOnlyView function that will return the required view as a string
+create a post method handler in the routes
+add a form on the contact page
+make notfound page show within app layout
+sumbit form with post method -> show message handling submitted data

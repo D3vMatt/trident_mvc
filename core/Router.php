@@ -11,14 +11,17 @@ class Router
 
     protected array $routes = [];
     protected Request $request;
+    protected Response $response;
 
     /**
      * Router constructor.
      * @param Request $request
+     * @param Response $response
      */
-    public function __construct(Request $request)
+    public function __construct(Request $request, Response $response)
     {
         $this->request = $request;
+        $this->response = $response;
     }
 
 
@@ -31,6 +34,15 @@ class Router
         $this->routes['get'][$path] = $callback;
     }
 
+    /**
+     * @param string $path
+     * @param $callback
+     */
+    public function post(string $path, $callback)
+    {
+        $this->routes['post'][$path] = $callback;
+    }
+
     // Get route callback using path and method
     public function resolve()
     {
@@ -38,24 +50,38 @@ class Router
         $path = $this->request->getPath();
         $callback = $this->routes[$method][$path] ?? false;
 
+        // Render view
         if (is_string($callback)) {
-            $layoutContent = $this->includeAsString(Application::$ROOT_DIR ."/views/layout/main.php");
-            $viewContent = $this->includeAsString( Application::$ROOT_DIR ."/views/$callback.php");
-            return str_replace('{{content}}', $viewContent, $layoutContent);
+            $viewContent = $this->includeAsString(Application::$ROOT_DIR . "/views/$callback.php");
+            return $this->addContentToLayout('main', 'content', $viewContent);
         }
 
+        // Call callback
         if ($callback)
             return call_user_func($callback);
 
-
-
-        return 'Route not found';
+        // 404 Not found
+        $this->response->setStatusCode(404);
+        $notFoundPage = $this->includeAsString(Application::$ROOT_DIR . "/views/_404.php");
+        return $this->addContentToLayout('main', 'content', $notFoundPage);
 
     }
 
-    private function includeAsString($path) {
+    private function addContentToLayout($layoutFilename, $contentSection, $content)
+    {
+        $layoutContent = $this->includeAsString(Application::$ROOT_DIR . "/views/layout/$layoutFilename.php");
+        return str_replace("{{" . $contentSection . "}}", $content, $layoutContent);
+    }
+
+
+    /**
+     * @param $path
+     * @return false|string
+     */
+    private function includeAsString($path)
+    {
         ob_start();
-        include_once $path;
+        include_once($path);
         return ob_get_clean();
     }
 
