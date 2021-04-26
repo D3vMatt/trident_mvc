@@ -52,8 +52,7 @@ class Router
 
         // Render view
         if (is_string($callback)) {
-            $viewContent = $this->includeAsString(Application::$ROOT_DIR . "/views/$callback.php");
-            return $this->addContentToLayout('main', 'content', $viewContent);
+            return $this->renderView($callback);
         }
 
         // Call callback
@@ -62,17 +61,21 @@ class Router
 
         // 404 Not found
         $this->response->setStatusCode(404);
-        $notFoundPage = $this->includeAsString(Application::$ROOT_DIR . "/views/_404.php");
-        return $this->addContentToLayout('main', 'content', $notFoundPage);
+        return $this->renderView('_404');
 
     }
 
-    private function addContentToLayout($layoutFilename, $contentSection, $content)
+    public function renderContentToLayout($layoutFilename, $contentSection, $content)
     {
         $layoutContent = $this->includeAsString(Application::$ROOT_DIR . "/views/layout/$layoutFilename.php");
         return str_replace("{{" . $contentSection . "}}", $content, $layoutContent);
     }
 
+    public function renderView($view)
+    {
+        $viewContent = $this->includeAsString(Application::$ROOT_DIR . "/views/$view.php");
+        return $this->renderContentToLayout('main', 'content', $viewContent);
+    }
 
     /**
      * @param $path
