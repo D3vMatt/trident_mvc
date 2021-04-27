@@ -9,10 +9,8 @@ use app\controllers\SiteController;
 $app = new Application(dirname(__DIR__));
 
 $app->router->get('/', [SiteController::class, 'home']);
-$app->router->get('/contact', 'contact');
-$app->router->post('/contact', function () {
-    return "Submitting form " . print_r($_POST, true);
-});
+$app->router->get('/contact', [SiteController::class, 'contact']);
+$app->router->post('/contact', [SiteController::class, 'handleContactSubmit']);
 
 
 $app->run();
