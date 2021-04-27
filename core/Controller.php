@@ -10,7 +10,7 @@ class Controller
 {
 
     public function render($view){
-        Application::$app->router->renderView($view);
+        return Application::$app->router->renderView($view);
     }
 
 }

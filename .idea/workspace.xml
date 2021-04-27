@@ -20,13 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a88f7036-c293-43ad-8b12-d70fea8ec931" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/custom_mvc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/custom_mvc.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/SiteController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reademe.md" beforeDir="false" afterPath="$PROJECT_DIR$/reademe.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +70,8 @@
       <workItem from="1618897400523" duration="472000" />
       <workItem from="1618898030231" duration="16417000" />
       <workItem from="1619411802826" duration="415000" />
-      <workItem from="1619412233307" duration="5542000" />
+      <workItem from="1619412233307" duration="5724000" />
+      <workItem from="1619498102520" duration="1201000" />
     </task>
     <servers />
   </component>
@@ -90,6 +88,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1619156377538">
