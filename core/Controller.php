@@ -9,8 +9,8 @@ use app\core\Router;
 class Controller
 {
 
-    public function render($view){
-        return Application::$app->router->renderView($view);
+    public function render($view, $data){
+        return Application::$app->router->renderView($view, $data);
     }
 
 }

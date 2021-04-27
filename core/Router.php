@@ -75,9 +75,9 @@ class Router
         return str_replace("{{" . $contentSection . "}}", $content, $layoutContent);
     }
 
-    public function renderView($view)
+    public function renderView($view, $data = null)
     {
-        $viewContent = $this->includeAsString(Application::$ROOT_DIR . "/views/$view.php");
+        $viewContent = $this->includeAsString(Application::$ROOT_DIR . "/views/$view.php", $data);
         return $this->renderContentToLayout('main', 'content', $viewContent);
     }
 
@@ -85,8 +85,13 @@ class Router
      * @param $path
      * @return false|string
      */
-    private function includeAsString($path)
+    private function includeAsString($path, $data = null)
     {
+        if ($data) {
+            foreach ($data as $key => $value) {
+                ${$key} = $value;
+            }
+        }
         ob_start();
         include_once($path);
         return ob_get_clean();

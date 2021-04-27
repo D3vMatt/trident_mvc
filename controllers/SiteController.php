@@ -9,9 +9,10 @@ use app\core\Controller;
 
 class SiteController extends Controller
 {
-
     public function home() {
-        return $this->render('home');
+        $data = [
+          'description' => 'Welcome to the home page!'
+        ];
+        return $this->render('home', $data);
     }
-
 }
