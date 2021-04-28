@@ -61,7 +61,7 @@ class Router
 
         // Call callback
         if ($callback)
-            return call_user_func($callback);
+            return call_user_func($callback, $this->request);
 
         // 404 Not found
         $this->response->setStatusCode(404);

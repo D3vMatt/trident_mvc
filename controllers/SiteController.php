@@ -6,6 +6,7 @@ namespace app\controllers;
 
 use app\core\Application;
 use app\core\Controller;
+use app\core\Request;
 
 class SiteController extends Controller
 {
@@ -22,8 +23,9 @@ class SiteController extends Controller
         return $this->render('contact');
     }
 
-    public function handleContactSubmit()
+    public function handleContactSubmit(Request $request)
     {
+        $data = $request->getBody();
         echo "Submitting contact form";
     }
 }

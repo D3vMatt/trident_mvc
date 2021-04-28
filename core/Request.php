@@ -18,4 +18,13 @@ class Request
         return strtolower($_SERVER['REQUEST_METHOD']);
     }
 
+    public function getBody()
+    {
+        $data = [];
+        foreach ($_REQUEST as $key => $value) {
+            $data[$key] = filter_var($value, FILTER_SANITIZE_SPECIAL_CHARS);
+        }
+        return $data;
+    }
+
 }
