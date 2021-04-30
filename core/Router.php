@@ -46,7 +46,7 @@ class Router
     // Get route callback using path and method
     public function resolve()
     {
-        $method = $this->request->getMethod();
+        $method = $this->request->method();
         $path = $this->request->getPath();
         $callback = $this->routes[$method][$path] ?? false;
 
@@ -56,7 +56,8 @@ class Router
         }
 
         if (is_array($callback)) {
-            $callback[0] = new $callback[0]();
+            Application::$app->setController(new $callback[0]());
+            $callback[0] = Application::$app->getController();
         }
 
         // Call callback
@@ -69,16 +70,16 @@ class Router
 
     }
 
-    public function renderContentToLayout($layoutFilename, $contentSection, $content)
+    public function renderContentToLayout($contentSection, $content)
     {
-        $layoutContent = $this->includeAsString(Application::$ROOT_DIR . "/views/layout/$layoutFilename.php");
+        $layoutContent = $this->includeAsString(Application::$ROOT_DIR . "/views/layout/" . Application::$app->controller->layout . ".php");
         return str_replace("{{" . $contentSection . "}}", $content, $layoutContent);
     }
 
     public function renderView($view, $data = null)
     {
         $viewContent = $this->includeAsString(Application::$ROOT_DIR . "/views/$view.php", $data);
-        return $this->renderContentToLayout('main', 'content', $viewContent);
+        return $this->renderContentToLayout('content', $viewContent);
     }
 
     /**

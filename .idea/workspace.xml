@@ -20,11 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a88f7036-c293-43ad-8b12-d70fea8ec931" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/controllers/AuthController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/layout/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Application.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Request.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reademe.md" beforeDir="false" afterPath="$PROJECT_DIR$/reademe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/main.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +59,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/layout" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\trident_mvc\views\layout" />
+      <recent name="C:\xampp\htdocs\trident_mvc\views" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\trident_mvc\public" />
       <recent name="C:\xampp\htdocs\trident_mvc" />
@@ -73,7 +84,7 @@
       <workItem from="1619411802826" duration="415000" />
       <workItem from="1619412233307" duration="5724000" />
       <workItem from="1619498102520" duration="3862000" />
-      <workItem from="1619586051829" duration="1969000" />
+      <workItem from="1619586051829" duration="6130000" />
     </task>
     <servers />
   </component>
@@ -97,10 +108,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1619156377538" />
-    <state x="776" y="243" key="NewPhpClassDialog" timestamp="1619414248819">
+    <state x="776" y="243" key="NewPhpClassDialog" timestamp="1619589010108">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="776" y="243" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1619414248819" />
+    <state x="776" y="243" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1619589010108" />
     <state x="795" y="443" key="NewPhpFileDialog" timestamp="1619155749363">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
